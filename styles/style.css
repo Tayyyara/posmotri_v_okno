@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -35,4 +38,260 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.content {
+  display: flex;
+  align-items: end;
+  inline-size: 1140px;
+  gap: 28px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.content__list {
+  block-size: 298px;
+  overflow: auto;
+  position: relative;
+}
+
+.content__details {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.title {
+  margin: 2px 0 22px 2px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 93%;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.result__video-container {
+  inline-size: 711px;
+  block-size: 386px;
+  position: relative;
+}
+
+.result__video {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.content__list-item {
+  margin-bottom: 33px;
+}
+
+.content__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.content__video-card {
+  display: flex;
+  align-items: start;
+}
+
+.content__video-card-thumbnail {
+  inline-size: 194px;
+  block-size: 103px;
+  object-fit: cover;
+}
+
+.content__video-card-description-container {
+  margin-right: auto;
+  padding-top: 5px;
+  padding-left: 2px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin: 4px;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid white;
+}
+
+.content__video-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 100%;
+  margin-bottom: 6px;
+}
+
+.content__video-card-description {
+  line-height: 16.2px;
+}
+
+.search-form__fieldset-title {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+fieldset {
+  border: 0;
+}
+
+.search-form__label {
+  width: fit-content;
+  cursor: pointer;
+  display: flex;
+  gap: 5px;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.search-form__textfield {
+  appearance: none;
+  width: 225px;
+  height: 27px;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: inherit;
+  padding: 0;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  color: white;
+}
+
+.search-form__textfield::placeholder {
+  color: rgb(255 255 255/0.7);
+}
+
+.search-form__textfield:active {
+  border-left: white;
+  border-right: white;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid white;
+  outline-offset: 1px;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  vertical-align: middle;
+  width: 19px;
+  height: 19px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before  {
+  content: "";
+  background-color: white;
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__label-text {
+  line-height: 18px;
+}
+
+.button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid white;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  min-height: 34px;
+}
+
+button:active {
+  background-color: #545050;
+}
+
+button:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 1px;
+}
+
+.search-form__submit-button {
+  width: 194px;
+  align-self: end;
+}
+
+.more-button {
+  width: 399px;
 }
