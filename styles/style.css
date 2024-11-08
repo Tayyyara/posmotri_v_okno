@@ -83,6 +83,7 @@ ol {
   block-size: 386px;
   margin-bottom: 16px;
   overflow: hidden;
+  position: relative;
 }
 
 .result__video {
