@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -37,8 +40,17 @@ ol {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .content {
-  margin: 138px auto;
   display: flex;
   align-items: end;
   inline-size: 1140px;
@@ -71,13 +83,11 @@ ol {
   block-size: 386px;
   margin-bottom: 16px;
   overflow: hidden;
-  position: relative;
 }
 
 .result__video {
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  object-fit: cover;
 }
 
 .content__list-item {
@@ -141,16 +151,6 @@ h1 {
   margin-bottom: 5px;
 }
 
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-
 fieldset {
   border: 0;
 }
@@ -205,18 +205,18 @@ fieldset {
   width: 19px;
   height: 19px;
   border: 1px solid white;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before  {
   content: "";
   background-color: white;
-  position: absolute;
-  left: 1px;
-  top: 1px;
-  right: 1px;
-  bottom: 1px;
+  display: block;
+  width: 15px;
+  height: 15px;
 }
 
 .search-form__checkbox-list {
